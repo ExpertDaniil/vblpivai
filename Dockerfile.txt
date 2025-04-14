@@ -1,0 +1,5 @@
+FROM ollama/ollama:latest
+COPY Modelfile ./Modelfile
+RUN ollama create my-deepseek -f ./Modelfile
+EXPOSE 11434
+CMD ["ollama", "serve"]
